@@ -1,0 +1,2 @@
+rootProject.name = "AJ App"
+include ':app'

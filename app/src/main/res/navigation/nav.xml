@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/home1">
+    <fragment
+        android:id="@+id/home1"
+        android:label="Home"
+        android:name="com.example.ajapp.Home.Activity.Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/loc"
+        android:label="Location"
+        android:name="com.example.ajapp.Menu.ui.Fragment.Location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/tts"
+        android:label="TTS_STT"
+        android:name="com.example.ajapp.Menu.ui.Fragment.TTS_STT"
+        tools:layout="@layout/fragment_t_t_s__s_t_t" />
+    <fragment
+        android:id="@+id/imageEdit"
+        android:label="Image Editor"
+        android:name="com.example.ajapp.Menu.ui.Fragment.ImageEditor"
+        tools:layout="@layout/fragment_image_editor" />
+    <fragment
+        android:id="@+id/tabss"
+        android:label="Tab Layouts"
+        android:name="com.example.ajapp.Menu.ui.Fragment.Tabs"
+        tools:layout="@layout/fragment_tabs" />
+    <fragment
+        android:id="@+id/pdfv"
+        android:label="Pdf Viewer"
+        android:name="com.example.ajapp.pdfViewer"
+        tools:layout="@layout/fragment_pdf_viewer" />
+    <fragment
+        android:id="@+id/dt"
+        android:label="Date And Time"
+        android:name="com.example.ajapp.Menu.ui.Fragment.DateTime"
+        tools:layout="@layout/fragment_date_time" />
+    <fragment
+        android:id="@+id/attend1"
+        android:label="Attendees"
+        android:name="com.example.ajapp.Menu.ui.Fragment.Attend"
+        tools:layout="@layout/fragment_attend" />
+    <fragment
+        android:id="@+id/weather1"
+        android:label="Weather"
+        android:name="com.example.ajapp.Menu.ui.Fragment.Weather"
+        tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/alarm"
+        android:label="Alarm Manager"
+        android:name="com.example.ajapp.Menu.ui.Fragment.Alarm_Manager"
+        tools:layout="@layout/fragment_alarm__manager" />
+    <fragment
+        android:id="@+id/settings"
+        android:label="Settings"
+        android:name="com.example.ajapp.Menu.ui.Fragment.LogOut"
+        tools:layout="@layout/fragment_log_out" />
+
+
+
+</navigation>
