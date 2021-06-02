@@ -23,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 @Suppress("DEPRECATION")
 class Location : Fragment(), OnMapReadyCallback {
-   
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -39,31 +39,32 @@ class Login : AppCompatActivity() {
         val date=findViewById<TextView>(R.id.t1)
         present.visibility= View.GONE
         date.visibility= View.GONE
+
         loginb1.setOnClickListener{
-
-            val username1=namelogin.text.toString()
-            val password1=passlogin.text.toString()
-
-            //getting all users
-            val valid=mUserViewModel.getUsername(username1)
-
-            val present1 = present.text.toString()
-            val user1= Attendees(0,username1,present1, Calendar.getInstance().time)
-            mUserViewModel.addUser1(user1)
-
-            //validating the given passsword with all users
-            if( password1==valid.Password )
-            {
-                Toast.makeText(this,"successfully logged in",Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, NavDrawer::class.java))
-            }
-            else
-            {
-                Toast.makeText(this,"Incorrect Username/Password",Toast.LENGTH_LONG).show()
-            }
+try {
 
 
+    val username1 = namelogin.text.toString()
+    val password1 = passlogin.text.toString()
 
+    //getting all users
+    val valid = mUserViewModel.getUsername(username1)
+
+    val present1 = present.text.toString()
+    val user1 = Attendees(0, username1, present1, Calendar.getInstance().time)
+    mUserViewModel.addUser1(user1)
+
+    //validating the given passsword with all users
+    if (password1 == valid.Password) {
+        Toast.makeText(this, "successfully logged in", Toast.LENGTH_LONG).show()
+        startActivity(Intent(this, NavDrawer::class.java))
+    } else {
+        Toast.makeText(this, "Incorrect Username/Password", Toast.LENGTH_LONG).show()
+    }
+
+}catch (e:java.lang.Exception){
+    Toast.makeText(this, "Inputs required", Toast.LENGTH_SHORT).show()
+}
         }
         notyet.setOnClickListener {
             startActivity(Intent(this, Register::class.java))

@@ -106,7 +106,7 @@ class ImageEditor : Fragment() {
         //Zooming in
         zoom1.setOnZoomInClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                if(img.drawable == null){
+                if(img.drawable != null){
                     Toast.makeText(context,"Pick Image",Toast.LENGTH_LONG).show()
                 }
                 else {
@@ -124,7 +124,7 @@ class ImageEditor : Fragment() {
         //Zooming out
         zoom1.setOnZoomOutClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                if(img.drawable == null){
+                if(img.drawable != null){
                     Toast.makeText(context,"Pick Image",Toast.LENGTH_LONG).show()
                 }
                 else {
